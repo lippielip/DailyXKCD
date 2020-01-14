@@ -6,7 +6,7 @@ Single Page Webapp designed to give a random XKCD Comic every 30 Minutes
 
 ## Installation
 ```bash
-`Navigate to the src directory`
+Navigate to the src directory
 # install dependencies
 npm install
 # create production build that can be served with NGINX etc.
