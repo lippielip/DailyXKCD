@@ -21,7 +21,7 @@ class App extends React.Component {
         .then(data => this.setState({ data: data }));
       setTimeout(() => {
         this.getNewImage();
-      }, 86400000);
+      }, 1800000);
     } catch (error) {
       console.dir("No connection. Retrying...")
       setTimeout(() => {
