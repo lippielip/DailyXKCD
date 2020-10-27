@@ -23,7 +23,7 @@ class App extends React.Component {
         this.getNewImage();
       }, 1800000);
     } catch (error) {
-      console.dir("No connection. Retrying...")
+      document.getElementById("errorDiv").innerHTML="Error fetching posts. Retrying..."
       setTimeout(() => {
         this.getNewImage();
       }, 60000);
@@ -37,8 +37,11 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>{this.state.data.title}</h1>
-          <img src={this.state.data.img} className="App-logo" alt="comic of the day" />
-        </header>
+          </header>
+          <div className="App-body">
+            <img src={this.state.data.img} className="App-content" alt="comic of the day" />
+            <div id="errorDiv" />
+          </div>
       </div>
     );
   }
